@@ -8,17 +8,17 @@ pipeline{
             }
         }
 
-        stage 'Test'{
+        stage ('Test'){
             // sh 'go vet'
             // sh 'go test -cover'
         }
             
             
-        stage 'Build'{
+        stage ('Build'){
             // sh 'go build .'
         }
             
-        stage 'Deploy'{
+        stage ('Deploy'){
             // do no thing
         }
     }
