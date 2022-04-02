@@ -4,26 +4,26 @@ pipeline{
 
         stage('Checkout'){
             steps{
-                git 'https://github.com/longpt233/japanese-learning-app'
+                git branch: 'main', url: 'https://github.com/longpt233/japanese-learning-app'
             }
         }
 
-        // stage('Test'){
-        //     steps{
-        //         // do no thing
-        //     }
-        // }
+        stage('Test'){
+            steps{
+                echo 'test'
+            }
+        }
             
-        // stage('Build'){
-        //     steps{
-        //         // do no thing
-        //     }
-        // }
+        stage('Build'){
+            steps{
+                echo 'build'
+            }
+        }
             
-        // stage('Deploy'){
-        //     steps{
-        //         // do no thing
-        //     }
-        // }
+        stage('Deploy'){
+            steps{
+                echo 'deploy'
+            }
+        }
     }
 }
