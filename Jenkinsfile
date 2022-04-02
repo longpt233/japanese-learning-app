@@ -17,6 +17,7 @@ pipeline{
         stage('Build'){
             steps{
                 withDockerRegistry(credentialsId: 'docker-hub', url: 'https://hub.docker.com/') {
+                    echo 'start build ...'
                     sh 'docker build -t longpt233/app-image .'
                     sh 'docker push  -t longpt233/app-image'
                 }
