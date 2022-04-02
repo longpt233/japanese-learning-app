@@ -16,7 +16,10 @@ pipeline{
             
         stage('Build'){
             steps{
-                echo 'build'
+                withDockerRegistry(credentialsId: 'docker-hub', url: 'https://index.docker.io/v1/') {
+                    sh 'docker build -t longpt233/app-image .'
+                    sh 'docker push  -t longpt233/app-image'
+                }
             }
         }
             
