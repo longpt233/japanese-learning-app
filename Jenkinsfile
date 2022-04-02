@@ -9,17 +9,22 @@ pipeline{
         }
 
         stage('Test'){
-            // sh 'go vet'
-            // sh 'go test -cover'
+            steps{
+                // do no thing
+            }
         }
             
             
         stage('Build'){
-            // sh 'go build .'
+            steps{
+                // do no thing
+            }
         }
             
         stage('Deploy'){
-            // do no thing
+            steps{
+                // do no thing
+            }
         }
     }
 }
