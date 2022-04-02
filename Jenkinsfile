@@ -8,23 +8,22 @@ pipeline{
             }
         }
 
-        stage('Test'){
-            steps{
-                // do no thing
-            }
-        }
+        // stage('Test'){
+        //     steps{
+        //         // do no thing
+        //     }
+        // }
             
+        // stage('Build'){
+        //     steps{
+        //         // do no thing
+        //     }
+        // }
             
-        stage('Build'){
-            steps{
-                // do no thing
-            }
-        }
-            
-        stage('Deploy'){
-            steps{
-                // do no thing
-            }
-        }
+        // stage('Deploy'){
+        //     steps{
+        //         // do no thing
+        //     }
+        // }
     }
 }
