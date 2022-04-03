@@ -19,7 +19,7 @@ pipeline{
                 withDockerRegistry(credentialsId: 'docker-hub', url: 'https://index.docker.io/v1/') {
                     echo 'start build ...'
                     sh 'docker build -t longpt233/app-image .'
-                    sh 'docker push  -t longpt233/app-image'
+                    sh 'docker push longpt233/app-image'
                 }
             }
         }
