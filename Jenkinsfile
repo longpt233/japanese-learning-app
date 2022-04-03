@@ -30,7 +30,7 @@ pipeline{
                 
                 sshagent(['ssh-remote']) {
                     sh "ssh -o StrictHostKeyChecking=no -l long 13.70.60.235 'touch /home/long/hello-agent-ssh'"
-                    sh "ssh -o StrictHostKeyChecking=no -l long 13.70.60.235 'docker run -d -p 8091:8091 longpt233/app-image'"
+                    sh "ssh -o StrictHostKeyChecking=no -l root 13.70.60.235 'docker run -d -p 8091:8091 longpt233/app-image'"
                 }
             }
         }
