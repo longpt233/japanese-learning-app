@@ -28,7 +28,7 @@ pipeline{
             steps{
                 echo 'start deploy ...'
                 
-                sshagent(['ssh-remote']) {
+                sshagent(['ssh-remote']){
                     sh "ssh -o StrictHostKeyChecking=no -l long 13.70.60.235 'docker kill $(docker ps -q)'"
                     sh "ssh -o StrictHostKeyChecking=no -l long 13.70.60.235 'docker run -d -p 8091:8091 longpt233/app-image'"
                 }
