@@ -2,4 +2,5 @@
 
 ```
 go mod init learning
+go run main.go
 ```

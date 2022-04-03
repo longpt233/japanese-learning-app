@@ -1,5 +1,10 @@
 # japanese-learning-app
 midterm special topics
 
+# flow ci cd
+![](./document/flow.png)
 # jenkins
-- test jenkins
+
+# Golang
+
+# Mobile App
