@@ -26,7 +26,10 @@ pipeline{
             
         stage('Deploy'){
             steps{
-                echo 'deploy'
+                echo 'start deploy ...'
+                sshagent(['ssh-remote']) {
+                    sh 'ssh -o StrictHostKeyChecking=no -l root 13.70.60.235 docker run longpt233/app-image -p 8091:8091'
+                }
             }
         }
     }
