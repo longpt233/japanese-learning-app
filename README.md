@@ -5,6 +5,13 @@ midterm special topics
 ![](./document/flow.png)
 # jenkins
 
-# Golang
+```
+http://13.70.60.235:8080/
+```
 
-# Mobile App
+# golang
+
+```
+http://13.70.60.235:8091/
+```
+# mobile app
