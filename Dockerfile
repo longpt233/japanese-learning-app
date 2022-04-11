@@ -1,16 +1,13 @@
-FROM golang:1.13
+FROM node:lts-alpine
 
 WORKDIR /app
 
-COPY ./server/go.mod .
-COPY ./server/go.sum .
+COPY ./src/package.json .
 
-RUN go mod tidy
+RUN yarn
 
-COPY ./server .
+COPY ./src .
 
 EXPOSE 8091
 
-RUN go build -o ./run main.go
-
-CMD ["./run"]
+CMD ["yarn", "start"]
