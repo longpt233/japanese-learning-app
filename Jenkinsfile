@@ -4,7 +4,7 @@ pipeline{
 
         stage('Checkout'){
             steps{
-                git branch: 'main', url: 'https://github.com/longpt233/japanese-learning-app'
+                git branch: 'main', url: 'https://github.com/longpt233/learning-app'
             }
         }
 
