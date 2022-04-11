@@ -19,6 +19,10 @@ func RunAPI(address string) error {
 		ctx.String(http.StatusOK, "them chuc nang")
 	})
 
+	r.GET("/hello", func(ctx *gin.Context) {
+		ctx.String(http.StatusOK, "them chuc nang lan 2")
+	})
+
 	return r.Run(address)
 
 }
