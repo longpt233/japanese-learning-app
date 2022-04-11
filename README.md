@@ -1,4 +1,4 @@
-# japanese-learning-app
+# learning-app
 midterm special topics
 
 # flow ci cd
