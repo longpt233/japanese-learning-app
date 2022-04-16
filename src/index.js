@@ -1,13 +1,14 @@
 import express from 'express';
 import 'dotenv/config';
-
-import homeRoute from './routes/home.js';
-
+import mongoDBConnect from './config/db.js';
+import authRoutes from './routes/auth.routes.js';
 const app = express();
-const SERVER_PORT = 8091;
 
-app.use(homeRoute);
+app.use(express.json());
+app.use(authRoutes);
+const PORT = process.env.SERVER_PORT || 8091;
 
-app.listen(SERVER_PORT, () => {
-  console.log(`Server run in http://localhost:${SERVER_PORT}`);
+app.listen(PORT, () => {
+  console.log(`Server run in http://localhost:${PORT}`);
+  mongoDBConnect();
 });
