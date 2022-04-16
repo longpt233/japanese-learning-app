@@ -1,15 +1,12 @@
 import mongoose from "mongoose";
 
-const mongoDBConnect = () => {
+const mongoDBConnect = async () => {
   mongoose.Promise = global.Promise;
-  mongoose
-    .connect(process.env.MONGODB_URI)
-    .then(() => {
-      console.log("Connect to MongoDB successfully!");
-    })
-    .catch((err) => {
-      console.error("Error when connect to MongoDB: ", err);
-      throw err;
-    });
+  try {
+    await mongoose.connect(process.env.MONGODB_URI);
+    console.log("Connect to MongoDB successfully!");
+  }catch(error){
+    console.log("Error when connect to MongoDB: ", err);
+  }
 };
 export default mongoDBConnect;
